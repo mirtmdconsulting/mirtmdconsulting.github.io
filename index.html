@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maria A. Mirt S. — Healthcare Operations Consultant | mirtmdconsulting.com</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1612;
+      --ink-light: #4a4540;
+      --parchment: #faf8f4;
+      --cream: #f2ede4;
+      --rule: #d4c9b8;
+      --accent: #8b4513;
+      --accent-light: #c4722a;
+      --accent-pale: #f5ede3;
+      --white: #ffffff;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--parchment);
+      color: var(--ink);
+      font-size: 16px;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.25rem 4rem;
+      background: rgba(250,248,244,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--rule);
+    }
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--accent); }
+    .nav-cta {
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--white) !important;
+      background: var(--accent);
+      padding: 0.6rem 1.4rem;
+      border-radius: 2px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .nav-cta:hover { background: var(--accent-light) !important; }
+
+    /* ── HERO ── */
+    #hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding-top: 80px;
+    }
+    .hero-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 6rem 4rem;
+      position: relative;
+    }
+    .hero-left::after {
+      content: '';
+      position: absolute;
+      top: 0; bottom: 0; right: 0;
+      width: 1px;
+      background: var(--rule);
+    }
+    .hero-eyebrow {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.2s forwards;
+    }
+    .hero-headline {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.8rem, 4.5vw, 4.2rem);
+      font-weight: 300;
+      line-height: 1.15;
+      color: var(--ink);
+      margin-bottom: 1.5rem;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.4s forwards;
+    }
+    .hero-headline em { font-style: italic; color: var(--accent); }
+    .hero-sub {
+      font-size: 1.05rem;
+      font-weight: 300;
+      color: var(--ink-light);
+      max-width: 480px;
+      margin-bottom: 2.5rem;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.6s forwards;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.8s forwards;
+    }
+    .btn-primary {
+      display: inline-block;
+      background: var(--accent);
+      color: var(--white);
+      padding: 0.85rem 2rem;
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 2px;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .btn-primary:hover { background: var(--accent-light); transform: translateY(-1px); }
+    .btn-ghost {
+      display: inline-block;
+      color: var(--ink);
+      padding: 0.85rem 1.5rem;
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: 1px solid var(--rule);
+      border-radius: 2px;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+    .hero-stats {
+      display: flex;
+      gap: 2.5rem;
+      margin-top: 3.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--rule);
+      opacity: 0;
+      animation: fadeUp 0.8s 1s forwards;
+    }
+    .stat-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.2rem;
+      font-weight: 600;
+      color: var(--accent);
+      line-height: 1;
+    }
+    .stat-label {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+      margin-top: 0.3rem;
+    }
+    .hero-right {
+      background: var(--cream);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 6rem 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-right::before {
+      content: '\201C';
+      position: absolute;
+      top: -2rem; right: 2rem;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20rem;
+      color: var(--rule);
+      line-height: 1;
+      pointer-events: none;
+    }
+    .hero-quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem;
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.5;
+      color: var(--ink);
+      position: relative;
+      z-index: 1;
+      margin-bottom: 2rem;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.6s forwards;
+    }
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      opacity: 0;
+      animation: fadeUp 0.8s 1s forwards;
+    }
+    .tag {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: var(--accent-pale);
+      padding: 0.35rem 0.75rem;
+      border-radius: 2px;
+    }
+
+    /* ── SECTION BASE ── */
+    section { padding: 6rem 4rem; }
+    .section-label {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 3vw, 2.8rem);
+      font-weight: 300;
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+    }
+    .section-body {
+      font-size: 1rem;
+      font-weight: 300;
+      color: var(--ink-light);
+      max-width: 600px;
+      line-height: 1.8;
+    }
+
+    /* ── PROBLEM ── */
+    #problem {
+      background: var(--ink);
+      color: var(--parchment);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+      align-items: center;
+    }
+    #problem .section-title { color: var(--parchment); }
+    #problem .section-body { color: rgba(250,248,244,0.65); }
+    .problem-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+    .problem-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      font-size: 0.95rem;
+      font-weight: 300;
+      color: rgba(250,248,244,0.85);
+      line-height: 1.6;
+    }
+    .problem-list li::before {
+      content: '—';
+      color: var(--accent-light);
+      flex-shrink: 0;
+      margin-top: 0.05em;
+    }
+
+    /* ── SERVICES ── */
+    #services { background: var(--white); }
+    .services-header {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: end;
+      margin-bottom: 4rem;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--rule);
+      border: 1px solid var(--rule);
+    }
+    .service-card {
+      background: var(--white);
+      padding: 2.5rem;
+      display: flex;
+      flex-direction: column;
+      transition: background 0.3s;
+    }
+    .service-card:hover { background: var(--accent-pale); }
+    .service-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3rem;
+      font-weight: 300;
+      color: var(--rule);
+      line-height: 1;
+      margin-bottom: 1.5rem;
+    }
+    .service-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 0.5rem;
+      line-height: 1.3;
+    }
+    .service-for {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+    .service-desc {
+      font-size: 0.9rem;
+      font-weight: 300;
+      color: var(--ink-light);
+      line-height: 1.7;
+      flex: 1;
+      margin-bottom: 1.5rem;
+    }
+    .service-includes {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      margin-bottom: 1.5rem;
+    }
+    .service-includes li {
+      font-size: 0.8rem;
+      color: var(--ink-light);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .service-includes li::before { content: '✓'; color: var(--accent); font-weight: 600; }
+    .service-price {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--ink);
+      padding-top: 1rem;
+      border-top: 1px solid var(--rule);
+    }
+
+    /* ── CASES ── */
+    #cases { background: var(--cream); }
+    .cases-header { margin-bottom: 3rem; }
+    .case-item {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      gap: 3rem;
+      padding: 2.5rem 0;
+      border-top: 1px solid var(--rule);
+      align-items: start;
+    }
+    .case-item:last-child { border-bottom: 1px solid var(--rule); }
+    .case-label {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+      padding-top: 0.3rem;
+    }
+    .case-context {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      font-weight: 400;
+      font-style: italic;
+      color: var(--ink-light);
+      margin-bottom: 0.75rem;
+    }
+    .case-body {
+      font-size: 0.92rem;
+      font-weight: 300;
+      color: var(--ink-light);
+      line-height: 1.75;
+      margin-bottom: 1rem;
+    }
+    .case-results { display: flex; gap: 2rem; flex-wrap: wrap; }
+    .result-item { display: flex; flex-direction: column; }
+    .result-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: var(--accent);
+      line-height: 1;
+    }
+    .result-desc {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+      margin-top: 0.2rem;
+    }
+
+    /* ── INSIGHTS ── */
+    #insights { background: var(--white); }
+    .insights-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 3rem;
+    }
+    .insights-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+    .insight-card {
+      border: 1px solid var(--rule);
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .insight-card:hover { border-color: var(--accent); transform: translateY(-3px); }
+    .insight-topic {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+    .insight-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--ink);
+      line-height: 1.4;
+      margin-bottom: 0.75rem;
+    }
+    .insight-excerpt {
+      font-size: 0.85rem;
+      font-weight: 300;
+      color: var(--ink-light);
+      line-height: 1.7;
+      flex: 1;
+      margin-bottom: 1rem;
+    }
+    .insight-link {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: gap 0.2s;
+    }
+    .insight-link:hover { gap: 0.7rem; }
+
+    /* ── PODCAST ── */
+    #podcast {
+      background: var(--ink);
+      color: var(--parchment);
+      padding: 6rem 4rem;
+    }
+    .podcast-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+      align-items: center;
+    }
+    #podcast .section-label { color: var(--accent-light); }
+    #podcast .section-title { color: var(--parchment); }
+    .podcast-desc {
+      font-size: 1rem;
+      font-weight: 300;
+      color: rgba(250,248,244,0.65);
+      line-height: 1.8;
+      margin-bottom: 2rem;
+    }
+    .podcast-topics { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .podcast-tag {
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(250,248,244,0.5);
+      background: rgba(250,248,244,0.07);
+      padding: 0.3rem 0.65rem;
+      border-radius: 2px;
+    }
+    .podcast-player-wrap {
+      background: rgba(250,248,244,0.05);
+      border: 1px solid rgba(250,248,244,0.12);
+      border-radius: 4px;
+      padding: 2.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+    .podcast-episode-label {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent-light);
+    }
+    .podcast-episode-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 300;
+      color: var(--parchment);
+      line-height: 1.35;
+    }
+    .podcast-meta {
+      font-size: 0.82rem;
+      font-weight: 300;
+      color: rgba(250,248,244,0.4);
+    }
+    .podcast-play-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: var(--accent);
+      color: var(--white);
+      padding: 0.85rem 1.75rem;
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 2px;
+      transition: background 0.2s, transform 0.2s;
+      align-self: flex-start;
+    }
+    .podcast-play-btn::before { content: '▶'; font-size: 0.7rem; }
+    .podcast-play-btn:hover { background: var(--accent-light); transform: translateY(-1px); }
+
+    /* ── ABOUT ── */
+    #about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      background: var(--parchment);
+    }
+    .about-left {
+      padding: 6rem 4rem;
+      border-right: 1px solid var(--rule);
+    }
+    .about-right {
+      padding: 6rem 4rem;
+      background: var(--cream);
+    }
+    .about-body {
+      font-size: 1rem;
+      font-weight: 300;
+      color: var(--ink-light);
+      line-height: 1.85;
+      margin-bottom: 1.5rem;
+    }
+    .about-photo-wrap { margin-bottom: 2.5rem; }
+    .about-photo {
+      width: 100%;
+      max-width: 320px;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 4px;
+      display: block;
+    }
+    .credentials {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .credentials li {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      font-size: 0.88rem;
+      font-weight: 300;
+      color: var(--ink-light);
+    }
+    .cred-marker {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+      margin-top: 0.55em;
+    }
+    .about-quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.5;
+      color: var(--ink);
+      margin-bottom: 2rem;
+    }
+
+    /* ── CTA ── */
+    #cta {
+      background: var(--ink);
+      text-align: center;
+      padding: 7rem 4rem;
+    }
+    #cta .section-label { color: var(--accent-light); }
+    #cta .section-title { color: var(--parchment); text-align: center; max-width: 700px; margin: 0 auto 1.5rem; }
+    #cta .section-body { color: rgba(250,248,244,0.6); text-align: center; margin: 0 auto 2.5rem; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--ink);
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding: 2.5rem 4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .footer-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--parchment);
+      text-decoration: none;
+    }
+    .footer-links { display: flex; gap: 2rem; list-style: none; }
+    .footer-links a {
+      font-size: 0.75rem;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(250,248,244,0.4);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--parchment); }
+    .footer-copy { font-size: 0.75rem; color: rgba(250,248,244,0.3); }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      nav { padding: 1rem 1.5rem; }
+      .nav-links { display: none; }
+      section { padding: 4rem 1.5rem; }
+      #hero, #problem, #about { grid-template-columns: 1fr; }
+      .hero-left::after { display: none; }
+      .hero-right { display: none; }
+      .hero-left { padding: 4rem 1.5rem; }
+      .services-header { grid-template-columns: 1fr; }
+      .services-grid { grid-template-columns: 1fr; }
+      .insights-grid { grid-template-columns: 1fr; }
+      .case-item { grid-template-columns: 1fr; gap: 1rem; }
+      .about-left, .about-right { padding: 4rem 1.5rem; }
+      .podcast-inner { grid-template-columns: 1fr; gap: 3rem; }
+      #podcast { padding: 4rem 1.5rem; }
+      footer { flex-direction: column; gap: 1rem; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a class="nav-logo" href="#hero">Maria A. Mirt S. — MD, MSc</a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#cases">Case Studies</a></li>
+      <li><a href="#insights">Insights</a></li>
+      <li><a href="#podcast">Podcast</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="https://calendly.com/mariamirt/30min" target="_blank" class="nav-cta">Book a Call</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-left">
+      <p class="hero-eyebrow">Healthcare Operations Consultant · MD, MSc</p>
+      <h1 class="hero-headline">
+        Most primary care practices don't fail because of bad medicine.<br>
+        They fail because <em>operations were never made explicit.</em>
+      </h1>
+      <p class="hero-sub">
+        By the time it shows up in revenue — through denials, documentation gaps, or broken handoffs — the damage is already compounding. I help organizations fix it at the source.
+      </p>
+      <div class="hero-actions">
+        <a href="https://calendly.com/mariamirt/30min" target="_blank" class="btn-primary">Book a Free 30-Min Call</a>
+        <a href="#services" class="btn-ghost">See How I Work</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-num">18+</div>
+          <div class="stat-label">Years in Healthcare</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">$1.8M</div>
+          <div class="stat-label">Revenue Recovered</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">62%</div>
+          <div class="stat-label">Avg. Appeal Reduction</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <p class="hero-quote">
+        "When I reviewed their approach, they were fighting denials after they happened. Hiring people to appeal. Writing letters to payers. Playing defense. The problem: they were treating symptoms, not causes."
+      </p>
+      <div class="hero-tags">
+        <span class="tag">Clinical Documentation</span>
+        <span class="tag">Revenue Cycle</span>
+        <span class="tag">Risk Adjustment</span>
+        <span class="tag">CDI Programs</span>
+        <span class="tag">Value-Based Care</span>
+        <span class="tag">HCC Coding</span>
+        <span class="tag">Workflow Design</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- BAND -->
+  <div style="background:var(--ink); padding:2rem 4rem;">
+    <div style="max-width:1100px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:2rem; flex-wrap:wrap;">
+      <div>
+        <p style="font-family:'Cormorant Garamond',serif; font-size:1.15rem; font-weight:400; color:var(--parchment);">Is operational debt quietly growing in your organization?</p>
+        <p style="font-size:0.8rem; color:rgba(250,248,244,0.4); margin-top:0.2rem;">A 30-minute conversation is usually enough to find out.</p>
+      </div>
+      <a href="https://calendly.com/mariamirt/30min" target="_blank" style="display:inline-block; background:var(--white); color:var(--ink); font-size:0.8rem; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; padding:0.75rem 1.5rem; border-radius:2px; text-decoration:none; white-space:nowrap; flex-shrink:0;">Book a free discovery call →</a>
+    </div>
+  </div>
+
+  <!-- PROBLEM -->
+  <section id="problem">
+    <div class="reveal">
+      <p class="section-label">The Pattern I Keep Seeing</p>
+      <h2 class="section-title">The same failures repeat across care settings.</h2>
+      <p class="section-body">
+        Early-stage and scaling primary care organizations share a predictable set of operational blind spots. The good news: they're fixable — but only if addressed before growth amplifies them.
+      </p>
+    </div>
+    <ul class="problem-list reveal">
+      <li>Inconsistent intake and documentation standards that live in people's heads, not in systems</li>
+      <li>Revenue leakage that starts long before a claim is ever submitted</li>
+      <li>Unclear ownership of clinical workflows and handoffs between teams</li>
+      <li>Telehealth encounters capturing 15–25% fewer HCC codes than in-person visits — silently</li>
+      <li>CDI programs treated as a department rather than a process woven into daily care</li>
+      <li>Risk adjustment strategies that can't survive a CMS audit</li>
+      <li>Denial rates above 10% being treated as a billing problem when they're actually a documentation problem</li>
+    </ul>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="services-header">
+      <div class="reveal">
+        <p class="section-label">How I Work</p>
+        <h2 class="section-title">Three ways to engage, one outcome: operations that hold up.</h2>
+      </div>
+      <div class="reveal">
+        <p class="section-body">
+          I work with a small number of organizations at a time to ensure every engagement gets the depth it deserves. Each offer is designed to be a contained commitment that delivers measurable results.
+        </p>
+      </div>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-num">01</div>
+        <h3 class="service-name">Operational Readiness Assessment</h3>
+        <p class="service-for">For primary care startups · 6–24 months post-launch</p>
+        <p class="service-desc">A 2-week diagnostic engagement. I audit your intake workflows, documentation standards, coding alignment, and revenue cycle handoffs — then deliver a prioritized gap report and 30-day action plan.</p>
+        <ul class="service-includes">
+          <li>End-to-end workflow review</li>
+          <li>Documentation &amp; coding gap analysis</li>
+          <li>Prioritized findings report</li>
+          <li>90-minute strategy debrief</li>
+          <li>30-day action roadmap</li>
+        </ul>
+        <div class="service-price">$2,500 – $3,500 · Fixed fee</div>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-num">02</div>
+        <h3 class="service-name">Fractional Clinical Operations</h3>
+        <p class="service-for">For scaling health plans &amp; primary care groups</p>
+        <p class="service-desc">Monthly retainer engagement. I serve as your embedded clinical operations and CDI advisor — reviewing workflows, supporting risk adjustment strategy, and providing on-demand expertise without the full-time cost.</p>
+        <ul class="service-includes">
+          <li>10–15 hours/month dedicated support</li>
+          <li>Workflow design &amp; SOP development</li>
+          <li>CDI program oversight</li>
+          <li>Risk adjustment strategy</li>
+          <li>Provider education &amp; alignment</li>
+        </ul>
+        <div class="service-price">$3,000 – $4,500 · Monthly retainer</div>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-num">03</div>
+        <h3 class="service-name">CDI &amp; Revenue Cycle Program Design</h3>
+        <p class="service-for">For organizations with documentation or denial problems</p>
+        <p class="service-desc">A 4–6 week project engagement. I design or redesign your CDI process, build your provider education framework, create coding alignment workflows, and deliver a measurement dashboard you can actually use.</p>
+        <ul class="service-includes">
+          <li>Current-state process assessment</li>
+          <li>CDI program design &amp; SOPs</li>
+          <li>Provider education curriculum</li>
+          <li>KPI framework &amp; dashboard</li>
+          <li>Implementation handoff support</li>
+        </ul>
+        <div class="service-price">$6,000 – $9,000 · Project fee</div>
+      </div>
+    </div>
+    <div style="margin-top:2.5rem; text-align:center;" class="reveal">
+      <a href="https://calendly.com/mariamirt/30min" target="_blank" class="btn-primary">Start with a free 30-min call →</a>
+    </div>
+  </section>
+
+  <!-- CASE STUDIES -->
+  <section id="cases">
+    <div class="cases-header reveal">
+      <p class="section-label">Results</p>
+      <h2 class="section-title">What changes when operations are made explicit.</h2>
+    </div>
+
+    <div class="case-item reveal">
+      <div class="case-label">Revenue Cycle · Risk Adjustment</div>
+      <div class="case-content">
+        <p class="case-context">A virtual-first primary care organization, 18 months post-launch, with 12 providers across multiple states — denial rate at 18%, spending $240K annually on appeal specialists.</p>
+        <p class="case-body">The organization was treating denials as a billing problem and hiring more staff to fight them downstream. After reviewing their workflows, the root cause was clear: documentation failures at the point of care, not billing errors. I redesigned their CDI process to be concurrent with encounters, introduced real-time claim scrubbing before submission, and built payer-specific documentation checklists. The metric shifted from "how fast can we appeal" to "how many denials did we prevent."</p>
+        <div class="case-results">
+          <div class="result-item"><div class="result-num">18% → 9%</div><div class="result-desc">Denial rate</div></div>
+          <div class="result-item"><div class="result-num">62%</div><div class="result-desc">Appeal workload reduction</div></div>
+          <div class="result-item"><div class="result-num">54 → 41</div><div class="result-desc">Days in AR</div></div>
+          <div class="result-item"><div class="result-num">$1.8M</div><div class="result-desc">Net revenue recovered annually</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-item reveal">
+      <div class="case-label">Medicare Advantage · HCC Capture</div>
+      <div class="case-content">
+        <p class="case-context">A Medicare Advantage organization with RAF scores running 12% below benchmark across their provider network — significant risk adjustment revenue being left uncaptured.</p>
+        <p class="case-body">Inconsistent HCC capture across the network was traced to documentation habits — specifically, providers not assessing and documenting chronic conditions outside the primary reason for visit. I redesigned their concurrent CDI workflow, built payer-specific documentation templates that prompted condition assessment during encounters, and created a provider education program aligned with risk adjustment logic. The program was subsequently audit-ready and passed its first CMS review without findings.</p>
+        <div class="case-results">
+          <div class="result-item"><div class="result-num">+12%</div><div class="result-desc">RAF score improvement</div></div>
+          <div class="result-item"><div class="result-num">Zero</div><div class="result-desc">CMS audit findings</div></div>
+          <div class="result-item"><div class="result-num">100%</div><div class="result-desc">Provider network adoption</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-item reveal">
+      <div class="case-label">ACA Health Plan · Operational Scaling</div>
+      <div class="case-content">
+        <p class="case-context">A national ACA health plan scaling large-scale clinical and documentation programs supporting ACA populations — programs were unstable, lacking clear ownership and consistent execution standards.</p>
+        <p class="case-body">I led the stabilization and scaling of these programs through end-to-end workflow redesign, working cross-functionally with Data and Engineering to improve program visibility and support automation. I established clear performance standards and prioritization frameworks, ensuring alignment with quality, compliance, and regulatory requirements throughout. The result was a repeatable operating model that held up under regulatory scrutiny.</p>
+        <div class="case-results">
+          <div class="result-item"><div class="result-num">Stable</div><div class="result-desc">Program execution</div></div>
+          <div class="result-item"><div class="result-num">Automated</div><div class="result-desc">Key reporting workflows</div></div>
+          <div class="result-item"><div class="result-num">Compliant</div><div class="result-desc">Regulatory alignment maintained</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSIGHTS -->
+  <section id="insights">
+    <div class="insights-header reveal">
+      <div>
+        <p class="section-label">Thinking</p>
+        <h2 class="section-title">Perspectives on healthcare operations.</h2>
+      </div>
+      <a href="https://www.linkedin.com/in/maria-mirt/" target="_blank" class="btn-ghost" style="white-space:nowrap">All Articles →</a>
+    </div>
+    <div class="insights-grid">
+      <div class="insight-card reveal">
+        <p class="insight-topic">Clinical Documentation</p>
+        <h3 class="insight-title">CDI Is a Process, Not a Department</h3>
+        <p class="insight-excerpt">Most organizations treat CDI as a function housed in a team. The consequence: documentation quality becomes dependent on that team's bandwidth rather than embedded in clinical workflows where it actually belongs.</p>
+        <a href="https://www.linkedin.com/pulse/cdi-process-department-maria-a-mirt-s-md-msc-d6lzf/" target="_blank" class="insight-link">Read Article →</a>
+      </div>
+      <div class="insight-card reveal">
+        <p class="insight-topic">Revenue Cycle · Risk</p>
+        <h3 class="insight-title">The Hidden Operational Risk No One Takes Responsibility For</h3>
+        <p class="insight-excerpt">A quiet operational risk repeats itself across primary care organizations — and it usually only surfaces after revenue is already affected. The root cause isn't clinical. It's structural.</p>
+        <a href="https://www.linkedin.com/pulse/hidden-operational-risk-primary-care-one-takes-until-maria-a--jn1yc/" target="_blank" class="insight-link">Read Article →</a>
+      </div>
+      <div class="insight-card reveal">
+        <p class="insight-topic">Prior Authorization · AI</p>
+        <h3 class="insight-title">You Can't Appeal Your Way Out of a Denial Problem</h3>
+        <p class="insight-excerpt">Payers are using AI to auto-deny at scale. One algorithm rejected 300,000 claims in 2 months — one every 1.2 seconds. The organizations winning in 2026 are treating denials as a documentation problem, not a billing problem.</p>
+        <a href="https://www.linkedin.com/in/maria-mirt/" target="_blank" class="insight-link">Read on LinkedIn →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PODCAST -->
+  <section id="podcast">
+    <div class="podcast-inner">
+      <div class="reveal">
+        <p class="section-label">Listen</p>
+        <h2 class="section-title">Healthcare Operations — Straight Talk.</h2>
+        <p class="podcast-desc">
+          A candid conversation about what actually breaks in healthcare organizations — and how to fix it before it costs you revenue, talent, or regulatory standing. No filler, no platitudes. Just operational insight from someone who has built, broken, and rebuilt these systems firsthand.
+        </p>
+        <div class="podcast-topics">
+          <span class="podcast-tag">Clinical Documentation</span>
+          <span class="podcast-tag">Revenue Cycle</span>
+          <span class="podcast-tag">Healthcare Operations</span>
+          <span class="podcast-tag">CDI</span>
+          <span class="podcast-tag">Risk Adjustment</span>
+        </div>
+      </div>
+      <div class="podcast-player-wrap reveal">
+        <p class="podcast-episode-label">Featured Episode</p>
+        <h3 class="podcast-episode-title">The Operational Gaps Healthcare Organizations Stop Noticing — Until They Can't</h3>
+        <p class="podcast-meta">Maria A. Mirt S., MD, MSc &nbsp;·&nbsp; mirtmdconsulting.com</p>
+        <a href="https://drive.google.com/file/d/1b6Hmc0arSQHOFRYKSSQaua163JrRtlcT/view?usp=sharing"
+           target="_blank"
+           class="podcast-play-btn">
+          Listen Now
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="about-left reveal">
+      <p class="section-label">About</p>
+      <h2 class="section-title">I've seen the same failures repeat themselves across care settings.</h2>
+      <p class="about-body">
+        I'm a physician with 18+ years of healthcare experience, spanning clinical practice and operations, with deep expertise in clinical documentation, data quality, and revenue cycle foundations within the U.S. healthcare system.
+      </p>
+      <p class="about-body">
+        My work sits at the intersection of clinical reality and operational execution. I help organizations translate strategy into day-to-day processes that actually work — improving workflows, clarifying ownership, and fixing the handoffs between clinical, operational, and billing teams that quietly drive cost, risk, and clinician burnout.
+      </p>
+      <p class="about-body">
+        I've built departments and programs from scratch at organizations including Firefly Health, Sidecar Health, and Ultimate Health Plans — always with the same focus: making operations explicit before growth amplifies the gaps that already exist.
+      </p>
+      <ul class="credentials">
+        <li><div class="cred-marker"></div>MD — Clinical practice, diagnostic radiology residency</li>
+        <li><div class="cred-marker"></div>MSc — Healthcare Management &amp; Clinical Direction, VIU Spain</li>
+        <li><div class="cred-marker"></div>AAPC Member — Medical coding &amp; compliance</li>
+        <li><div class="cred-marker"></div>Bilingual — English / Spanish</li>
+      </ul>
+    </div>
+    <div class="about-right reveal">
+      <div class="about-photo-wrap">
+        <img src="photo.jpg" alt="Maria A. Mirt S. — MD, MSc" class="about-photo" />
+      </div>
+      <p class="about-quote">
+        "I'm especially interested in collaborating with founders, hospital innovators, and consulting teams who care about making healthcare technology and operations work beyond the pilot phase."
+      </p>
+      <p class="about-body">
+        I've worked across the full spectrum of healthcare operations: as a payer-side risk adjustment manager, as a provider-side revenue cycle leader, as a CDI architect, and as a clinical AI trainer. That range of perspective is what allows me to see the same problem from every angle and fix it at the source.
+      </p>
+      <p class="about-body">
+        I currently work with a small number of organizations at a time. If you're building, implementing, or scaling healthcare solutions and want them to hold up in the real world, I'd welcome a conversation.
+      </p>
+      <br>
+      <a href="https://calendly.com/mariamirt/30min" target="_blank" class="btn-primary">Schedule a Conversation</a>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="cta">
+    <p class="section-label reveal">Let's Talk</p>
+    <h2 class="section-title reveal">Is operational debt quietly growing in your organization?</h2>
+    <p class="section-body reveal">
+      A 30-minute conversation is usually enough to identify whether there's a fit and what the right starting point would be. No pitch, no pressure — just a direct exchange about where your operations stand and what's possible.
+    </p>
+    <div class="reveal">
+      <a href="https://calendly.com/mariamirt/30min" target="_blank" class="btn-primary" style="font-size:0.9rem; padding: 1rem 2.5rem;">
+        Book a Free 30-Min Discovery Call
+      </a>
+    </div>
+    <p style="margin-top:1.5rem; font-size:0.8rem; color:rgba(250,248,244,0.35); letter-spacing:0.05em;" class="reveal">
+      Or reach out directly: <a href="mailto:hello@mirtmdconsulting.com" style="color:rgba(250,248,244,0.45); text-decoration:none;">hello@mirtmdconsulting.com</a>
+    </p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <a href="#hero" class="footer-logo">Maria A. Mirt S. — MD, MSc</a>
+    <ul class="footer-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#cases">Case Studies</a></li>
+      <li><a href="#insights">Insights</a></li>
+      <li><a href="#podcast">Podcast</a></li>
+      <li><a href="https://www.linkedin.com/in/maria-mirt/" target="_blank">LinkedIn</a></li>
+    </ul>
+    <p class="footer-copy">&copy; 2026 mirtmdconsulting.com</p>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
