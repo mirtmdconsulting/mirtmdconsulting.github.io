@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ESQ898H2G8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ESQ898H2G8');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resources — Maria A. Mirt S. | mirtmdconsulting.com</title>
+  <meta name="description" content="Free and paid resources on healthcare operations, CDI, HCC risk adjustment, and revenue cycle — by Maria A. Mirt S., MD, MSc, CPC, CRC, CDEO." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1612;
+      --ink-light: #4a4540;
+      --parchment: #faf8f4;
+      --cream: #f2ede4;
+      --rule: #d4c9b8;
+      --accent: #8b4513;
+      --accent-light: #c4722a;
+      --accent-pale: #f5ede3;
+      --white: #ffffff;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--parchment);
+      color: var(--ink);
+      font-size: 16px;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.25rem 4rem;
+      background: rgba(250,248,244,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--rule);
+    }
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+    .nav-links a {
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--accent); }
+    .nav-links a.active { color: var(--accent); border-bottom: 1px solid var(--accent); padding-bottom: 2px; }
+    .nav-cta {
+      font-size: 0.8rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--white) !important; background: var(--accent);
+      padding: 0.6rem 1.4rem; border-radius: 2px; text-decoration: none; transition: background 0.2s;
+    }
+    .nav-cta:hover { background: var(--accent-light) !important; }
+
+    /* PAGE HERO */
+    .page-hero {
+      padding: 10rem 4rem 5rem;
+      background: var(--parchment);
+      border-bottom: 1px solid var(--rule);
+      max-width: 900px;
+    }
+    .page-eyebrow {
+      font-size: 0.72rem; font-weight: 500; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--accent); margin-bottom: 1rem;
+    }
+    .page-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.4rem, 4vw, 3.6rem);
+      font-weight: 300; line-height: 1.15; color: var(--ink); margin-bottom: 1.25rem;
+    }
+    .page-title em { font-style: italic; color: var(--accent); }
+    .page-sub {
+      font-size: 1rem; font-weight: 300; color: var(--ink-light);
+      max-width: 580px; line-height: 1.8;
+    }
+
+    /* SHARED */
+    .section-label {
+      font-size: 0.72rem; font-weight: 500; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--accent); margin-bottom: 1rem;
+    }
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.8rem, 2.8vw, 2.6rem);
+      font-weight: 300; line-height: 1.2; margin-bottom: 1.25rem;
+    }
+    .section-body {
+      font-size: 1rem; font-weight: 300; color: var(--ink-light);
+      max-width: 600px; line-height: 1.8;
+    }
+    .btn-primary {
+      display: inline-block; background: var(--accent); color: var(--white);
+      padding: 0.85rem 2rem; font-size: 0.82rem; font-weight: 500;
+      letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none;
+      border-radius: 2px; transition: background 0.2s, transform 0.2s;
+    }
+    .btn-primary:hover { background: var(--accent-light); transform: translateY(-1px); }
+    .btn-ghost {
+      display: inline-block; color: var(--ink);
+      padding: 0.85rem 1.5rem; font-size: 0.82rem; font-weight: 500;
+      letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none;
+      border: 1px solid var(--rule); border-radius: 2px; transition: border-color 0.2s, color 0.2s;
+    }
+    .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+
+    /* DOWNLOADS */
+    .resource-section {
+      padding: 6rem 4rem; background: var(--parchment); border-bottom: 1px solid var(--rule);
+    }
+    .resource-section-header { margin-bottom: 3rem; }
+    .resource-card {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center;
+      background: var(--white); border: 1px solid var(--rule); padding: 3rem;
+      border-radius: 2px; margin-bottom: 2rem; transition: border-color 0.2s;
+    }
+    .resource-card:hover { border-color: var(--accent); }
+    .resource-badge {
+      display: inline-block; font-size: 0.68rem; font-weight: 500;
+      letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent);
+      background: var(--accent-pale); padding: 0.3rem 0.75rem; border-radius: 2px; margin-bottom: 1rem;
+    }
+    .resource-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.5rem, 2vw, 2rem); font-weight: 300;
+      color: var(--ink); line-height: 1.2; margin-bottom: 0.75rem;
+    }
+    .resource-subtitle {
+      font-size: 0.92rem; font-weight: 300; color: var(--ink-light);
+      line-height: 1.7; margin-bottom: 1.75rem; max-width: 440px;
+    }
+    .resource-stats {
+      display: flex; gap: 2rem; margin-bottom: 2rem;
+      padding-bottom: 1.75rem; border-bottom: 1px solid var(--rule); flex-wrap: wrap;
+    }
+    .resource-stat-num {
+      font-family: 'Cormorant Garamond', serif; font-size: 1.5rem;
+      font-weight: 600; color: var(--accent); line-height: 1;
+    }
+    .resource-stat-label {
+      font-size: 0.68rem; font-weight: 500; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--ink-light); margin-top: 0.25rem;
+    }
+    .resource-actions { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
+    .resource-note { font-size: 0.75rem; color: var(--ink-light); font-weight: 300; }
+    .resource-right { display: flex; flex-direction: column; gap: 1rem; }
+    .resource-feature-item {
+      display: flex; gap: 1rem; align-items: flex-start;
+      padding: 1rem 1.25rem; background: var(--cream); border-radius: 2px;
+    }
+    .resource-feature-item:first-child { border-left: 3px solid var(--accent); }
+    .resource-feature-num {
+      font-family: 'Cormorant Garamond', serif; font-size: 1.4rem;
+      font-weight: 600; color: var(--accent); line-height: 1; min-width: 48px;
+    }
+    .resource-feature-text { font-size: 0.85rem; font-weight: 300; color: var(--ink-light); line-height: 1.6; }
+    .resource-feature-text strong {
+      font-weight: 500; color: var(--ink); display: block; margin-bottom: 0.15rem; font-size: 0.88rem;
+    }
+
+    /* PLAYBOOK */
+    #playbook-section {
+      background: var(--ink); color: var(--parchment);
+      padding: 7rem 4rem; border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .playbook-inner {
+      max-width: 1100px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start;
+    }
+    #playbook-section .section-label { color: var(--accent-light); }
+    #playbook-section .section-title { color: var(--parchment); margin-bottom: 1.25rem; }
+    .playbook-subtitle {
+      font-family: 'Cormorant Garamond', serif; font-size: 1.15rem;
+      font-style: italic; font-weight: 300;
+      color: rgba(250,248,244,0.65); margin-bottom: 2rem; line-height: 1.6;
+    }
+    .playbook-what {
+      font-size: 0.72rem; font-weight: 500; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--accent-light); margin-bottom: 1rem; margin-top: 2rem;
+    }
+    .playbook-list { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; margin-bottom: 1rem; }
+    .playbook-list li {
+      font-size: 0.9rem; font-weight: 300; color: rgba(250,248,244,0.8);
+      display: flex; align-items: flex-start; gap: 0.75rem; line-height: 1.5;
+    }
+    .playbook-list li::before { content: '→'; color: var(--accent-light); flex-shrink: 0; font-size: 0.85rem; margin-top: 0.1em; }
+    .playbook-right { position: sticky; top: 6rem; }
+    .playbook-cover-wrap {
+      background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 4px; padding: 2.5rem; text-align: center;
+    }
+    .playbook-cover-img {
+      width: 100%; max-width: 260px; border-radius: 3px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5); margin-bottom: 2rem;
+    }
+    .playbook-price {
+      font-family: 'Cormorant Garamond', serif; font-size: 2.6rem;
+      font-weight: 600; color: var(--parchment); line-height: 1;
+    }
+    .playbook-price-note { font-size: 0.78rem; color: var(--accent-light); letter-spacing: 0.05em; margin: 0.4rem 0 1.5rem; }
+    .payhip-buy-button {
+      display: block !important; width: 100% !important; background: var(--accent) !important;
+      color: var(--white) !important; padding: 1rem 2rem !important; font-size: 0.85rem !important;
+      font-weight: 500 !important; letter-spacing: 0.1em !important; text-transform: uppercase !important;
+      text-decoration: none !important; border-radius: 2px !important; border: none !important;
+      cursor: pointer !important; margin-bottom: 1rem !important; transition: background 0.2s !important;
+      text-align: center !important;
+    }
+    .payhip-buy-button:hover { background: var(--accent-light) !important; }
+    .playbook-coupon-note { font-size: 0.78rem; color: rgba(250,248,244,0.45); line-height: 1.6; margin-bottom: 1.5rem; }
+    .playbook-coupon-note strong { color: var(--accent-light); }
+    .playbook-includes { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.25rem; }
+    .playbook-includes-label {
+      font-size: 0.68rem; font-weight: 500; letter-spacing: 0.15em;
+      text-transform: uppercase; color: rgba(250,248,244,0.35); margin-bottom: 0.6rem;
+    }
+    .playbook-includes-list { list-style: none; display: flex; flex-direction: column; gap: 0.35rem; }
+    .playbook-includes-list li {
+      font-size: 0.8rem; color: rgba(250,248,244,0.55); display: flex; align-items: center; gap: 0.5rem;
+    }
+    .playbook-includes-list li::before { content: '✓'; color: var(--accent-light); font-size: 0.75rem; }
+
+    /* MEDIA */
+    #media-section { background: var(--cream); padding: 6rem 4rem; border-bottom: 1px solid var(--rule); }
+    .media-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 3rem; }
+    .media-card {
+      border: 1px solid var(--rule); border-radius: 2px; overflow: hidden;
+      background: var(--white); transition: border-color 0.2s, transform 0.2s;
+    }
+    .media-card:hover { border-color: var(--accent); transform: translateY(-3px); }
+    .media-card-header { background: var(--ink); padding: 2rem 2.5rem; color: var(--parchment); }
+    .media-card-type {
+      font-size: 0.68rem; font-weight: 500; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--accent-light); margin-bottom: 0.6rem;
+    }
+    .media-card-title {
+      font-family: 'Cormorant Garamond', serif; font-size: 1.35rem;
+      font-weight: 400; line-height: 1.3; color: var(--parchment); margin-bottom: 0.35rem;
+    }
+    .media-card-source { font-size: 0.78rem; color: rgba(250,248,244,0.4); }
+    .media-card-body { padding: 2rem 2.5rem; }
+    .media-card-desc { font-size: 0.9rem; font-weight: 300; color: var(--ink-light); line-height: 1.75; margin-bottom: 1.25rem; }
+    .media-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.5rem; }
+    .media-tag {
+      font-size: 0.68rem; font-weight: 500; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--accent); background: var(--accent-pale);
+      padding: 0.25rem 0.6rem; border-radius: 2px;
+    }
+    .media-link {
+      font-size: 0.78rem; font-weight: 500; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--white); background: var(--accent);
+      padding: 0.65rem 1.4rem; border-radius: 2px; text-decoration: none;
+      display: inline-block; transition: background 0.2s;
+    }
+    .media-link:hover { background: var(--accent-light); }
+    .media-link.ghost {
+      background: transparent; color: var(--accent); border: 1px solid var(--rule);
+    }
+    .media-link.ghost:hover { border-color: var(--accent); background: var(--accent-pale); }
+
+    /* ARTICLES */
+    #articles-section { background: var(--white); padding: 6rem 4rem; border-bottom: 1px solid var(--rule); }
+    .articles-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem; }
+    .articles-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+    .article-card {
+      border: 1px solid var(--rule); padding: 2rem; display: flex; flex-direction: column;
+      transition: border-color 0.2s, transform 0.2s; border-radius: 2px;
+    }
+    .article-card:hover { border-color: var(--accent); transform: translateY(-3px); }
+    .article-topic { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.75rem; }
+    .article-title { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 600; color: var(--ink); line-height: 1.4; margin-bottom: 0.75rem; }
+    .article-excerpt { font-size: 0.85rem; font-weight: 300; color: var(--ink-light); line-height: 1.7; flex: 1; margin-bottom: 1rem; }
+    .article-link { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); text-decoration: none; display: flex; align-items: center; gap: 0.4rem; transition: gap 0.2s; }
+    .article-link:hover { gap: 0.7rem; }
+
+    /* ACADEMY */
+    #academy-section { background: var(--parchment); padding: 6rem 4rem; border-bottom: 1px solid var(--rule); }
+    .academy-coming-soon {
+      border: 1px dashed var(--rule); border-radius: 2px; padding: 4rem;
+      text-align: center; background: var(--cream); margin-top: 2.5rem;
+    }
+    .academy-logo-mark { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 600; color: var(--accent); letter-spacing: 0.04em; margin-bottom: 0.75rem; }
+    .academy-tagline { font-size: 0.9rem; font-weight: 300; color: var(--ink-light); max-width: 480px; margin: 0 auto 2rem; line-height: 1.75; }
+    .academy-course-preview { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 2rem; }
+    .academy-course-tag { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); background: var(--accent-pale); padding: 0.35rem 0.85rem; border-radius: 2px; }
+
+    /* CTA */
+    .cta-band { background: var(--ink); padding: 5rem 4rem; text-align: center; }
+    .cta-band .section-label { color: var(--accent-light); }
+    .cta-band .section-title { color: var(--parchment); text-align: center; max-width: 700px; margin: 0 auto 1.25rem; }
+    .cta-band .section-body { color: rgba(250,248,244,0.6); text-align: center; margin: 0 auto 2.5rem; }
+
+    /* FOOTER */
+    footer {
+      background: var(--ink); border-top: 1px solid rgba(255,255,255,0.08);
+      padding: 2.5rem 4rem; display: flex; justify-content: space-between; align-items: center;
+    }
+    .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-weight: 600; color: var(--parchment); text-decoration: none; }
+    .footer-links { display: flex; gap: 2rem; list-style: none; }
+    .footer-links a { font-size: 0.75rem; font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(250,248,244,0.4); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--parchment); }
+    .footer-copy { font-size: 0.75rem; color: rgba(250,248,244,0.3); }
+
+    /* ANIMATIONS */
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    .reveal { opacity: 1; transform: translateY(0); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      nav { padding: 1rem 1.5rem; }
+      .nav-links { display: none; }
+      .page-hero { padding: 8rem 1.5rem 3rem; }
+      .resource-section, #articles-section, #academy-section, #media-section { padding: 4rem 1.5rem; }
+      #playbook-section { padding: 4rem 1.5rem; }
+      .resource-card { grid-template-columns: 1fr; gap: 2.5rem; }
+      .playbook-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .playbook-right { position: static; }
+      .media-grid { grid-template-columns: 1fr; }
+      .articles-grid { grid-template-columns: 1fr; }
+      .articles-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
+      footer { flex-direction: column; gap: 1rem; text-align: center; }
+      .cta-band { padding: 4rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a class="nav-logo" href="index.html">Maria A. Mirt S. — MD, MSc, CPC</a>
+    <ul class="nav-links">
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#cases">Case Studies</a></li>
+      <li><a href="index.html#insights">Insights</a></li>
+      <li><a href="resources.html" class="active">Resources</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="https://calendly.com/contact-mirtmdconsulting/30min" target="_blank" class="nav-cta">Book a Call</a></li>
+    </ul>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <p class="page-eyebrow">Free &amp; Paid Resources</p>
+    <h1 class="page-title">Tools, guides, and thinking<br>for <em>healthcare operators.</em></h1>
+    <p class="page-sub">
+      Everything here is built from 18+ years of clinical and operational experience — no recycled theory, no generic checklists. Whether you're opening a practice, closing documentation gaps, or preparing for a RADV audit, there's something here for you.
+    </p>
+  </div>
+
+  <!-- FREE DOWNLOADS -->
+  <section class="resource-section" id="downloads">
+    <div class="resource-section-header reveal">
+      <p class="section-label">Free Downloads</p>
+      <h2 class="section-title">Start here — no cost, no fluff.</h2>
+    </div>
+    <div class="resource-card reveal">
+      <div>
+        <span class="resource-badge">Free Download</span>
+        <h3 class="resource-title">Prior Authorization Intelligence Brief — Primary Care Edition</h3>
+        <p class="resource-subtitle">
+          As of March 31, 2026, CMS now requires payers to publicly post their prior authorization denial rates, appeal overturn rates, and decision timelines. Most practices don't know this data exists — or what to do with it. This brief closes that gap.
+        </p>
+        <div class="resource-stats">
+          <div><div class="resource-stat-num">53M</div><div class="resource-stat-label">MA PA requests in 2024</div></div>
+          <div><div class="resource-stat-num">80.7%</div><div class="resource-stat-label">Appeals overturned</div></div>
+          <div><div class="resource-stat-num">12.8%</div><div class="resource-stat-label">UHC denial rate</div></div>
+          <div><div class="resource-stat-num">94%</div><div class="resource-stat-label">Physicians report PA delays care</div></div>
+        </div>
+        <div class="resource-actions">
+          <a href="https://payhip.com/b/eHPE4" target="_blank" class="btn-primary">Download Free Brief</a>
+          <span class="resource-note">No cost &nbsp;·&nbsp; Instant PDF download</span>
+        </div>
+      </div>
+      <div class="resource-right">
+        <div class="resource-feature-item">
+          <div class="resource-feature-num">5</div>
+          <div class="resource-feature-text">
+            <strong>Payer-Specific Workflow Framework</strong>
+            A step-by-step PA strategy built around denial rates and appeal overturn data — tailored to your top payers.
+          </div>
+        </div>
+        <div class="resource-feature-item">
+          <div class="resource-feature-num">6</div>
+          <div class="resource-feature-text">
+            <strong>Major Payers Profiled</strong>
+            UnitedHealthcare, CVS/Aetna, Humana, Elevance, Cigna, and Centene — denial rates, appeal data, and key watch items.
+          </div>
+        </div>
+        <div class="resource-feature-item">
+          <div class="resource-feature-num">2</div>
+          <div class="resource-feature-text">
+            <strong>Denial Category Checklists</strong>
+            Most common denied service types and denial reasons in primary care — with prevention strategies.
+          </div>
+        </div>
+        <div style="padding: 1rem 1.25rem; border: 1px solid var(--rule); border-radius:2px; font-size:0.82rem; font-weight:300; color:var(--ink-light); line-height:1.6;">
+          Need a version built for your practice — your payer mix, your specialty, your denial history?
+          <a href="https://calendly.com/contact-mirtmdconsulting/30min" target="_blank" style="color:var(--accent); font-weight:500; text-decoration:none; display:block; margin-top:0.5rem; font-size:0.78rem; letter-spacing:0.06em; text-transform:uppercase;">Book a Free Consultation →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLAYBOOK -->
+  <section id="playbook-section">
+    <div class="playbook-inner">
+      <div>
+        <p class="section-label reveal">Flagship Resource</p>
+        <h2 class="section-title reveal">Opening a Primary Care Practice:<br>The Operational Playbook.</h2>
+        <p class="playbook-subtitle reveal">Most physicians opening a primary care practice know medicine.<br>What they don't have is a system.</p>
+        <p class="reveal" style="font-size:0.95rem; font-weight:300; color:rgba(250,248,244,0.6); max-width:100%; line-height:1.8;">
+          This playbook is the operational brain of a well-run primary care practice — written by a physician with 18+ years of healthcare operations experience. Every SOP, checklist, and template is built from real operational work, not theory.
+        </p>
+        <p class="playbook-what reveal">What's Inside — 7 Operational Sections</p>
+        <ul class="playbook-list reveal">
+          <li>Practice model definition and operating guardrails</li>
+          <li>Entity formation, payer sequencing, and credentialing control</li>
+          <li>Front desk as a revenue function — rules, scripts, reconciliation</li>
+          <li>Clinical documentation standards built for operations</li>
+          <li>Billing and cash flow oversight — founder-level weekly framework</li>
+          <li>Staffing, role clarity, and escalation rules</li>
+          <li>First 90-day operating rhythm — weekly and monthly cadence</li>
+        </ul>
+        <p class="playbook-what reveal">This Is For You If</p>
+        <ul class="playbook-list reveal">
+          <li>You are opening an independent primary care practice</li>
+          <li>You are an MSO-backed founder in pre-launch or year one</li>
+          <li>You want fewer expensive surprises and more predictable operations</li>
+        </ul>
+        <p style="font-size:0.72rem; color:rgba(250,248,244,0.25); margin-top:1.5rem;" class="reveal">
+          For operational and educational purposes only. Not legal, financial, or medical advice.<br>
+          &copy; 2026 Maria A. Mirt S., MD, MSc / MIRT MD Consulting. All rights reserved.
+        </p>
+      </div>
+      <div class="playbook-right reveal">
+        <div class="playbook-cover-wrap">
+          <img src="playbook-cover.png" alt="Opening a Primary Care Practice — The Operational Playbook"
+               class="playbook-cover-img" onerror="this.style.display='none'" />
+          <div class="playbook-price">$97</div>
+          <p class="playbook-price-note">⚡ Use code <strong>FOUNDING</strong> for $79 — first 50 copies only</p>
+          <a href="https://payhip.com/b/TXF65" class="payhip-buy-button" target="_blank">Get the Playbook — $97</a>
+          <p class="playbook-coupon-note">
+            Instant download · PDF + Excel Bonus Toolkit included<br>
+            Use code <strong>FOUNDING</strong> at checkout for $79
+          </p>
+          <div class="playbook-includes">
+            <p class="playbook-includes-label">Bonus Digital Toolkit Included</p>
+            <ul class="playbook-includes-list">
+              <li>Pre-Launch Financial Model</li>
+              <li>Credentialing Timeline Tracker</li>
+              <li>EMR Selection Framework</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEDIA -->
+  <section id="media-section">
+    <div class="reveal">
+      <p class="section-label">Media &amp; Press</p>
+      <h2 class="section-title">Conversations on healthcare operations.</h2>
+      <p class="section-body">Podcast appearances and media features covering CDI, prior authorization reform, and what it actually takes to build operational systems that hold up under scrutiny.</p>
+    </div>
+    <div class="media-grid">
+      <div class="media-card reveal">
+        <div class="media-card-header">
+          <p class="media-card-type">Podcast</p>
+          <h3 class="media-card-title">Physician Documentation Excellence Champion!</h3>
+          <p class="media-card-source">No Fear CDI Podcast &nbsp;·&nbsp; Hosted by Glenn Kraus</p>
+        </div>
+        <div class="media-card-body">
+          <p class="media-card-desc">
+            The gap between how physicians are trained to document and what payers, coders, and CDI teams actually need — and how organizations can close it before it quietly erodes revenue and audit readiness. Documentation excellence is a clinical leadership skill, not a compliance checkbox.
+          </p>
+          <div class="media-tags">
+            <span class="media-tag">CDI</span>
+            <span class="media-tag">Clinical Documentation</span>
+            <span class="media-tag">Physician Education</span>
+            <span class="media-tag">Revenue Integrity</span>
+          </div>
+          <a href="https://drive.google.com/file/d/1b6Hmc0arSQHOFRYKSSQaua163JrRtlcT/view?usp=sharing"
+             target="_blank" class="media-link">▶ Listen Now</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ARTICLES -->
+  <section id="articles-section">
+    <div class="articles-header reveal">
+      <div>
+        <p class="section-label">Thinking</p>
+        <h2 class="section-title">Perspectives on healthcare operations.</h2>
+      </div>
+      <a href="https://www.linkedin.com/in/maria-a-mirt/" target="_blank" class="btn-ghost" style="white-space:nowrap">All Articles on LinkedIn →</a>
+    </div>
+    <div class="articles-grid">
+      <div class="article-card reveal">
+        <p class="article-topic">Clinical Documentation</p>
+        <h3 class="article-title">CDI Is a Process, Not a Department</h3>
+        <p class="article-excerpt">Most organizations treat CDI as a function housed in a team. The consequence: documentation quality becomes dependent on that team's bandwidth rather than embedded in clinical workflows where it actually belongs.</p>
+        <a href="https://www.linkedin.com/pulse/cdi-process-department-maria-a-mirt-s-md-msc-d6lzf/" target="_blank" class="article-link">Read Article →</a>
+      </div>
+      <div class="article-card reveal">
+        <p class="article-topic">Revenue Cycle · Risk</p>
+        <h3 class="article-title">The Hidden Operational Risk No One Takes Responsibility For</h3>
+        <p class="article-excerpt">A quiet operational risk repeats itself across primary care organizations — and it usually only surfaces after revenue is already affected. The root cause isn't clinical. It's structural.</p>
+        <a href="https://www.linkedin.com/pulse/hidden-operational-risk-primary-care-one-takes-until-maria-a--jn1yc/" target="_blank" class="article-link">Read Article →</a>
+      </div>
+      <div class="article-card reveal">
+        <p class="article-topic">Prior Authorization · AI</p>
+        <h3 class="article-title">You Can't Appeal Your Way Out of a Denial Problem</h3>
+        <p class="article-excerpt">Payers are using AI to auto-deny at scale. One algorithm rejected 300,000 claims in 2 months. The organizations winning in 2026 are treating denials as a documentation problem, not a billing problem.</p>
+        <a href="https://www.linkedin.com/pulse/you-cant-appeal-your-way-out-denial-problem-mirt-s-md-msc-kgqge/" target="_blank" class="article-link">Read Article →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERMED ACADEMY -->
+  <section id="academy-section">
+    <div class="reveal">
+      <p class="section-label">Intermed Academy</p>
+      <h2 class="section-title">Coding education for practitioners and learners.</h2>
+      <p class="section-body">Intermed Academy is MIRT MD Consulting's education and training sub-brand — built for coding professionals and learners pursuing AAPC and AHIMA certification, and for clinical teams that need foundational documentation training.</p>
+    </div>
+    <div class="academy-coming-soon reveal">
+      <p class="academy-logo-mark">Intermed Academy</p>
+      <p class="academy-tagline">
+        Courses for CPC, CCS, and HCC risk adjustment training are in development — built by a credentialed physician with 18+ years of real-world coding and CDI experience. Not theory. Not test prep packaged by a marketer.
+      </p>
+      <div class="academy-course-preview">
+        <span class="academy-course-tag">CPC Exam Prep</span>
+        <span class="academy-course-tag">HCC Risk Adjustment</span>
+        <span class="academy-course-tag">ICD-10-CM</span>
+        <span class="academy-course-tag">CDI Foundations</span>
+        <span class="academy-course-tag">Inpatient Coding (CCS)</span>
+      </div>
+      <p style="font-size:0.78rem; color:var(--ink-light); font-weight:300; letter-spacing:0.05em;">Launching 2026 &nbsp;·&nbsp; Get notified when courses go live</p>
+      <br>
+      <a href="https://calendly.com/contact-mirtmdconsulting/30min" target="_blank" class="btn-primary">Get Notified When Courses Launch</a>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-band">
+    <p class="section-label reveal">Work Together</p>
+    <h2 class="section-title reveal">Need something built for your organization specifically?</h2>
+    <p class="section-body reveal">
+      These resources are starting points. If your situation requires a custom workflow, a payer-specific strategy, or an operational build from scratch — a 30-minute call is where it starts.
+    </p>
+    <div class="reveal">
+      <a href="https://calendly.com/contact-mirtmdconsulting/30min" target="_blank" class="btn-primary" style="font-size:0.9rem; padding: 1rem 2.5rem;">
+        Book a Free 30-Min Discovery Call
+      </a>
+    </div>
+    <p style="margin-top:1.5rem; font-size:0.8rem; color:rgba(250,248,244,0.35); letter-spacing:0.05em;" class="reveal">
+      Or reach out directly: <a href="/cdn-cgi/l/email-protection#7f1c10110b1e1c0b3f12160d0b121b1c10110c0a130b161118511c1012" style="color:rgba(250,248,244,0.45); text-decoration:none;"><span class="__cf_email__" data-cfemail="05666a6b7164667145686c77716861666a6b767069716c6b622b666a68">[email&#160;protected]</span></a>
+    </p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <a href="index.html" class="footer-logo">Maria A. Mirt S. — MD, MSc</a>
+    <ul class="footer-links">
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#cases">Case Studies</a></li>
+      <li><a href="index.html#insights">Insights</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="https://www.linkedin.com/in/maria-a-mirt/" target="_blank">LinkedIn</a></li>
+    </ul>
+    <p class="footer-copy">© 2026 mirtmdconsulting.com</p>
+  </footer>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.05, rootM
